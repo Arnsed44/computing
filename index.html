@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Modern Scientific Calculator</h1>
+
+        <div class="section">
+            <h2>What do you want to calculate?</h2>
+            <select id="calcType">
+                <option value="linear">Solve Linear Equation (e.g., x + 3 = 6)</option>
+                <option value="quadratic">Solve Quadratic Equation (e.g., x² - 5x + 6 = 0)</option>
+                <option value="triangle">Area of Triangle (e.g., base=5 height=10)</option>
+                <option value="pythagorean">Pythagorean Theorem (e.g., a=3 b=4)</option>
+                <option value="graph">Graph Function (e.g., y = x²)</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h2>Enter your expression or values</h2>
+            <input type="text" id="expression" placeholder="e.g., x + 3 = 6, base=5 height=10, or y = x²">
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <div class="section">
+            <h2>Result</h2>
+            <div id="result"></div>
+            <canvas id="graphCanvas" width="500" height="300"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
